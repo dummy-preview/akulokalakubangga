@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+    <title>CodePen - Smooth Page Scroll</title>
+
+
+
+
+    <style>
+        .test-div {
+            position: relative;
+            width: 100%;
+            height: 75vh;
+        }
+        
+        .black-div {
+            background-color: #000000;
+        }
+        
+        .test-heading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+        }
+        
+        .white-heading {
+            color: #ffffff;
+        }
+    </style>
+
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+
+
+
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+
+
+</head>
+
+<body translate="no" style="height: 2273px;">
+    <div id="butter" style="position: fixed; width: 100%; transform: translate3d(0px, 0px, 0px);">
+        <div class="test-div white-div">
+            <h1 class="test-heading black-heading">Section 1</h1>
+        </div>
+        <div class="test-div black-div">
+            <h1 class="test-heading white-heading">Section 2</h1>
+        </div>
+        <div class="test-div white-div">
+            <h1 class="test-heading black-heading">Section 3</h1>
+        </div>
+        <div class="test-div black-div">
+            <h1 class="test-heading white-heading">Section 4</h1>
+        </div>
+        <div class="test-div white-div">
+            <h1 class="test-heading black-heading">Section 5</h1>
+        </div>
+        <div class="test-div black-div">
+            <h1 class="test-heading white-heading">Section 6</h1>
+        </div>
+    </div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+    <script src="https://sudip-bhowmick.github.io/butterjs/butter.js"></script>
+    <script id="rendered-js">
+        var options = {
+            wrapperId: "butter",
+            wrapperDamper: 0.1,
+            cancelOnTouch: true
+        };
+
+        butter.init(options);
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

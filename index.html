@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
-    <link rel="stylesheet" type="text/css" href="css/simplePagination.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- thumb share -->
     <meta property="fb:app_id" content="114488588566911" />
@@ -35,67 +34,71 @@
 <body>
     <div class="cursor"></div>
     <div class="cursor2"></div>
-    <main class="main about">
-        <header class="header">
-            <div class="container">
-                <nav class="navbar">
-                    <!-- <div class="logo">
-                        <a href="index.html">
-                            <img src="img/tribunnews.svg" alt="LOGO">
-                        </a>
-                    </div> -->
-                    <div>
-                        <button id="menu-toggler" data-class="menu-active" class="hamburger">
-                                    <span class="hamburger-line hamburger-line-top"></span>
-                                    <span class="hamburger-line hamburger-line-middle"></span>
-                                    <span class="hamburger-line hamburger-line-bottom"></span>
-                                  </button>
-                        <ul id="primary-menu" class="menu nav-menu cursor-scale small">
-                            <li id="close1" class="menu-item current-menu-item"><a class="nav__link" href="#beranda">Home</a></li>
-                            <li id="close2" class="menu-item current-menu-item"><a class="nav__link" href="#kompetisi">About Us</a></li>
-                            <li id="close3" class="menu-item current-menu-item"><a class="nav__link" href="#voting">The Works</a></li>
-                            <li id="close4" class="menu-item current-menu-item"><a class="nav__link" href="#artikel">Case Study</a></li>
-                            <li id="close4" class="menu-item current-menu-item"><a class="nav__link" href="#artikel">Let's Talk</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </header>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/tribunnews.svg" alt="LOGO">
+                    </a>
+                </div>
+                <div>
+                    <button id="menu-toggler" data-class="menu-active" class="hamburger">
+                                <span class="hamburger-line hamburger-line-top"></span>
+                                <span class="hamburger-line hamburger-line-middle"></span>
+                                <span class="hamburger-line hamburger-line-bottom"></span>
+                              </button>
+                    <ul id="primary-menu" class="menu nav-menu cursor-scale small">
+                        <li id="close1" class="menu-item current-menu-item"><a class="nav__link" href="#beranda">Home</a></li>
+                        <li id="close2" class="menu-item current-menu-item"><a class="nav__link" href="#kompetisi">About Us</a></li>
+                        <li id="close3" class="menu-item current-menu-item"><a class="nav__link" href="#voting">The Works</a></li>
+                        <li id="close4" class="menu-item current-menu-item"><a class="nav__link" href="#artikel">Case Study</a></li>
+                        <li id="close4" class="menu-item current-menu-item"><a class="nav__link" href="#artikel">Let's Talk</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main about scroll-container" data-parallax="container">
         <div class="hero" id="beranda">
-            <div class="hero__bg" data-scroll-speed="3">
-                <video autoplay muted loop playsinline preload="metadata">
-                    <source src="img/video.mp4" type="video/mp4">
-                </video>
+            <div class="hero__obj1" data-scroll-speed="2">
+                <img src="img/o2.png" alt="">
             </div>
-            <div class="hero__overlay"></div>
-            <div class="container">
-                <div class="hero__wrap">
-                    <div class="hero__title">
-                        <div class="cursor-scale">AKU</div>
-                        <div class="word can cursor-scale">
-                            <span>L</span>
-                            <span>O</span>
-                            <span>K</span>
-                            <span>A</span>
-                            <span>L</span>
-                        </div>
-                        <div class="word will cursor-scale">
-                            <span>B</span>
-                            <span>A</span>
-                            <span>N</span>
-                            <span>G</span>
-                            <span>G</span>
-                            <span>A</span>
-                        </div>
+            <div class="hero__obj2" data-scroll-speed="3">
+                <img src="img/o5.png" alt="">
+            </div>
+            <div class="bg-video-wrap">
+                <video data-scroll-speed="2" src="img/video.mp4" loop="" muted="" autoplay="">
+              </video>
+                <div class="hero__overlay"></div>
+            </div>
+            <div class="hero__wrap">
+                <div class="hero__title">
+                    <div class="cursor-scale">AKU</div>
+                    <div class="word can cursor-scale">
+                        <span>L</span>
+                        <span>O</span>
+                        <span>K</span>
+                        <span>A</span>
+                        <span>L</span>
                     </div>
-                    <div class="hero__text cursor-scale small">
-                        Bangga akan nilai dan perspektif lokal di setiap berita dan cerita dari sudut mata lokal Indonesia!
+                    <div class="word will cursor-scale">
+                        <span>B</span>
+                        <span>A</span>
+                        <span>N</span>
+                        <span>G</span>
+                        <span>G</span>
+                        <span>A</span>
                     </div>
-                    <div class="scroll-down">
-                        <svg class="scroll-arrow" width="35" height="56" viewBox="0 0 35 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                </div>
+                <div class="hero__text cursor-scale small">
+                    Bangga akan nilai dan perspektif lokal di setiap berita dan cerita dari sudut mata lokal Indonesia!
+                </div>
+                <div class="scroll-down">
+                    <svg class="scroll-arrow" width="35" height="56" viewBox="0 0 35 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M15.9958 54.625C16.8922 55.5214 18.3456 55.5214 19.242 54.625L33.8497 40.0172C34.7461 39.1208 34.7461 37.6675 33.8497 36.7711C32.9533 35.8747 31.5 35.8747 30.6035 36.7711L17.6189 49.7557L4.63425 36.7711C3.73785 35.8747 2.28449 35.8747 1.38809 36.7711C0.491684 37.6675 0.491684 39.1208 1.38809 40.0172L15.9958 54.625ZM15.3235 0.699951L15.3235 53.0019L19.9143 53.0019L19.9143 0.699951L15.3235 0.699951Z" fill="white"></path>
                           </svg>
-                        <svg class="scroll-circle" width="167" height="166" viewBox="0 0 167 166" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="scroll-circle" width="167" height="166" viewBox="0 0 167 166" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M154.795 90.3375C155.339 90.33 155.782 90.1157 156.126 89.6947C156.47 89.2736 156.676 88.7346 156.745 88.0776C156.795 87.5973 156.761 87.1689 156.644 86.7924C156.525 86.4194 156.341 86.1181 156.09 85.8883C155.839 85.6621 155.54 85.531 155.194 85.4948C154.904 85.4645 154.648 85.5074 154.425 85.6234C154.206 85.7432 154.016 85.9055 153.855 86.1101C153.698 86.315 153.563 86.533 153.449 86.7639C153.339 86.9952 153.247 87.2088 153.173 87.4046L152.762 88.4755C152.658 88.7503 152.523 89.054 152.356 89.3865C152.189 89.7225 151.975 90.0376 151.716 90.3319C151.46 90.63 151.146 90.865 150.775 91.0369C150.403 91.2087 149.963 91.2681 149.455 91.2149C148.868 91.1537 148.355 90.9447 147.914 90.588C147.472 90.2348 147.142 89.7505 146.925 89.135C146.706 88.5231 146.641 87.8004 146.728 86.9669C146.809 86.1898 147.005 85.5301 147.315 84.9877C147.625 84.4488 148.021 84.0403 148.503 83.7622C148.986 83.4877 149.526 83.3602 150.123 83.3798L149.982 84.736C149.568 84.7286 149.215 84.8309 148.921 85.043C148.631 85.259 148.401 85.5457 148.232 85.9029C148.065 86.264 147.96 86.66 147.915 87.0908C147.862 87.5924 147.897 88.0512 148.017 88.4673C148.142 88.8837 148.338 89.2238 148.607 89.4875C148.879 89.7516 149.213 89.9043 149.609 89.9457C149.969 89.9833 150.273 89.9133 150.52 89.7356C150.767 89.5579 150.978 89.3122 151.154 88.9985C151.329 88.6847 151.49 88.3427 151.636 87.9723L152.157 86.6771C152.489 85.8549 152.907 85.2202 153.411 84.773C153.915 84.3257 154.532 84.1403 155.263 84.2167C155.871 84.2801 156.383 84.4997 156.801 84.8754C157.222 85.255 157.529 85.7369 157.721 86.3212C157.917 86.9093 157.978 87.5495 157.906 88.2418C157.833 88.9411 157.643 89.5496 157.335 90.0673C157.031 90.5854 156.647 90.9809 156.183 91.2537C155.718 91.5301 155.211 91.6485 154.662 91.609L154.795 90.3375Z" fill="white"></path>
                               <path d="M144.579 99.7494C144.807 99.0172 145.177 98.4406 145.688 98.0197C146.199 97.5987 146.802 97.3406 147.497 97.2452C148.193 97.1498 148.931 97.2238 149.71 97.4671C150.504 97.7146 151.158 98.0788 151.674 98.5597C152.192 99.0451 152.54 99.6039 152.719 100.236C152.9 100.873 152.88 101.544 152.66 102.249C152.489 102.798 152.232 103.261 151.891 103.638C151.551 104.016 151.153 104.288 150.699 104.455C150.245 104.622 149.764 104.663 149.254 104.579L149.629 103.379C150.013 103.398 150.392 103.293 150.765 103.064C151.14 102.839 151.411 102.462 151.576 101.933C151.722 101.465 151.728 101.017 151.593 100.588C151.462 100.164 151.206 99.7846 150.827 99.4504C150.45 99.1208 149.966 98.8639 149.377 98.6798C148.773 98.4915 148.218 98.4224 147.711 98.4726C147.204 98.5262 146.772 98.689 146.415 98.9609C146.058 99.2362 145.805 99.6112 145.657 100.086C145.559 100.398 145.525 100.698 145.555 100.986C145.584 101.274 145.672 101.538 145.821 101.777C145.969 102.017 146.174 102.219 146.436 102.382L146.061 103.582C145.621 103.371 145.258 103.073 144.972 102.69C144.689 102.311 144.507 101.87 144.426 101.365C144.348 100.864 144.399 100.326 144.579 99.7494Z" fill="white"></path>
                               <path d="M141.776 108.282L149.095 111.939L148.552 113.025L147.447 112.473L147.409 112.549C147.704 112.863 147.877 113.252 147.928 113.714C147.979 114.176 147.895 114.626 147.676 115.065C147.635 115.147 147.582 115.25 147.516 115.372C147.451 115.494 147.4 115.585 147.362 115.646L146.218 115.074C146.247 115.041 146.305 114.961 146.392 114.834C146.481 114.711 146.563 114.576 146.637 114.426C146.815 114.071 146.899 113.716 146.889 113.361C146.881 113.012 146.788 112.691 146.608 112.399C146.43 112.112 146.176 111.885 145.846 111.72L141.214 109.406L141.776 108.282Z" fill="white"></path>
@@ -127,19 +130,20 @@
                               <path d="M131.945 41.2954L137.243 34.5811L137.997 35.6662L133.86 40.6917L133.909 40.7617L140.05 38.6239L140.816 39.7264L136.673 44.7048L136.721 44.7748L142.858 42.6666L143.611 43.7517L135.469 46.3707L134.764 45.3557L138.906 40.3005L138.833 40.1955L132.649 42.3105L131.945 41.2954Z" fill="white"></path>
                               <path d="M145.676 53.9443L141.094 55.7423L140.635 54.5721L148.252 51.5832L148.695 52.7137L147.505 53.1808L147.544 53.2799C148.001 53.3067 148.418 53.4558 148.795 53.7273C149.176 53.9975 149.479 54.4202 149.705 54.9954C149.907 55.5111 149.979 56.0039 149.919 56.4737C149.862 56.9422 149.663 57.3675 149.321 57.7497C148.982 58.1306 148.489 58.4482 147.841 58.7025L143.001 60.6017L142.542 59.4315L147.302 57.5634C147.901 57.3286 148.306 56.9903 148.518 56.5486C148.733 56.1055 148.734 55.6129 148.522 55.0708C148.375 54.6972 148.163 54.3951 147.886 54.1645C147.609 53.9372 147.283 53.8002 146.906 53.7535C146.529 53.7069 146.119 53.7705 145.676 53.9443Z" fill="white"></path>
                           </svg>
-                    </div>
                 </div>
             </div>
         </div>
-        <div class="section1">
+        <div class="section1 pt pb">
             <div class="container">
-
+                <div class="section1__text cursor-scale small">
+                    “Meningkatkan Kinerja Bisnis Anda dengan Solusi Digital yang <span class="color-text">Lebih Baik dan Lebih Cerdas</span>”
+                </div>
             </div>
         </div>
 
     </main>
     <footer class="footer">
-        <div class="footer-container">
+        <!-- <div class="footer-container">
             <ul class="footer-social">
                 <li>
                     <a href="https://www.instagram.com/tribunnews/?hl=en" target="_blank" rel="noopener noreferrer">
@@ -176,7 +180,7 @@
                     <img src="img/logo-kgmedia-white.svg" alt="">
                 </a>
             </div>
-        </div>
+        </div> -->
     </footer>
 
     <!--back to top-->
@@ -185,7 +189,7 @@
             <img src="img/top.png " alt="top.png ">
         </div>
     </div>
-
+    <!-- 
     <div class="modal fade" id="videoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
         <div class="modal-overlay modal-toggle"></div>
         <div class="modal-wrapper modal-transition">
@@ -244,12 +248,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/main-home.js"></script>
+
 
 
 </body>

@@ -12,10 +12,10 @@
 body {
     /* font-family: 'Playfair Display', serif; */
     font-family: 'Rubik', sans-serif;
-    font-size: 1rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
-    color: #333333;
+    color: #222222;
     /* background: #f4fffe; */
     overflow-x: hidden;
     cursor: none;
@@ -263,13 +263,16 @@ ol li {
 
 .header {
     min-height: 80px;
-    background: rgba(0, 0, 0, 0.7);
+    background: transparent;
     display: flex;
-    align-items: center
+    align-items: center;
+    z-index: 1;
+    position: relative;
 }
 
 .logo {
     width: 137px;
+    display: none;
 }
 
 .logo img {
@@ -394,7 +397,7 @@ li.menu-item.current-menu-item {
 }
 
 .hamburger:hover .hamburger-line {
-    background: #333333
+    background: #ffffff
 }
 
 .hamburger-line-top {
@@ -443,7 +446,7 @@ li.menu-item.current-menu-item {
 
 @media screen and (max-width:768px) {
     .nav-menu {
-        background: #1AA49D;
+        background: rgba(0, 0, 0, 0.7);
         flex-direction: column;
         justify-content: center;
         opacity: 0;
@@ -933,6 +936,26 @@ td {
     height: 100vh;
 }
 
+.hero__obj1 {
+    position: absolute;
+    top: 27%;
+    left: 0;
+}
+
+.hero__obj2 {
+    position: absolute;
+    bottom: 13%;
+    right: 1%;
+}
+
+.hero__obj1 img {
+    width: 190px;
+}
+
+.hero__obj2 img {
+    width: 250px;
+}
+
 .hero__bg {
     width: 100%;
     position: absolute;
@@ -940,18 +963,45 @@ td {
     z-index: -2;
 }
 
-.hero__bg video {
+.bg-video {
     width: 100%;
     height: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.bg-video-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    /* background: rgba(0, 0, 0, 0.7); */
+    z-index: -10;
+    margin-top: -80px;
+}
+
+video {
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: 1;
 }
 
 .hero__overlay {
-    position: absolute;
-    top: 0px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
     background: rgba(0, 0, 0, 0.7);
-    z-index: -1;
+    background-size: 3px 3px;
+    z-index: 0;
 }
 
 .hero__title {
@@ -978,12 +1028,16 @@ td {
 }
 
 .hero__wrap {
-    display: flex;
-    height: 90vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 0;
+    max-width: 100%;
     width: 100%;
-    justify-content: center;
-    flex-direction: column;
-    /* padding-top: 150px; */
+    height: 25vh;
 }
 
 @-webkit-keyframes can {
@@ -1253,6 +1307,22 @@ td {
     height: 100vh;
     background: #fff;
     z-index: 1;
+}
+
+.section1__text {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 43px;
+    text-align: center;
+    color: #222222;
+    width: 718px;
+    margin: 0px auto;
+}
+
+.color-text {
+    color: #1671BC;
 }
 
 
@@ -5342,21 +5412,60 @@ input[type=file] {
         width: 100%;
         background: #1AA49D;
     }
-    .logo-bsi2,
-    .logo-bsi1,
-    .logo-bsi3 {
-        padding-right: 15px;
-        padding-left: 10px;
-        width: 200px;
-        margin: 0px auto;
-        padding-bottom: 20px;
-        display: none;
+    /* New */
+    .hero__title {
+        font-size: 30px;
+        line-height: 20.6px;
     }
-    .hadiah__obj1 img {
-        width: 40px;
+    .hero__text {
+        font-size: 14px;
+        line-height: 18px;
+        padding-top: 10px;
+        width: 87%;
     }
-    .hadiah__obj2 img {
-        width: 65px;
+    .navbar {
+        justify-content: space-between;
+    }
+    .scroll-circle {
+        width: 75px;
+    }
+    .scroll-arrow {
+        left: 48px;
+        bottom: 53px;
+        width: 13px;
+    }
+    .word {
+        margin-left: 10px;
+    }
+    .scroll-down {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0rem 0;
+        margin-left: 35%;
+    }
+    .hamburger-line {
+        background: #ffffff;
+    }
+    .logo {
+        display: block;
+    }
+    .section1__text {
+        font-size: 16px;
+        line-height: 22px;
+        width: 100%;
+    }
+    .hero__obj1 img {
+        width: 60px;
+    }
+    .hero__obj2 img {
+        width: 80px;
+    }
+    .hero__obj1 {
+        top: 22%;
+    }
+    .hero__obj2 {
+        bottom: 31%;
+        right: 0%;
     }
 }
 
