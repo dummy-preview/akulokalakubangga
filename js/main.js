@@ -170,10 +170,10 @@ var mySwiper = new Swiper(".slide5", {
     loop: true,
     loopAdditionalSlides: 30,
     speed: 1000,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 4000,
+    //     disableOnInteraction: false,
+    // },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -300,11 +300,14 @@ function videoId(button) {
         var $videoUrl = $videoUrl.toString();
         var srcVideo;
 
-        if ($videoUrl.indexOf("mp4") !== -1) {
+        if ($videoUrl.indexOf("") !== -1) {
             return (
-                '<video loop controls playsinline autoplay><source src="' +
+                '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/embed/' +
                 $videoUrl +
-                '" type="video/mp4"></video>');
+                '" data-video-id="' +
+                $videoUrl +
+                '" style="max-width: 605px;min-width: 325px;"> <section></section></iframe> <script async src="https://www.tiktok.com/embed.js"></script>'
+            );
 
         } else {
             alert(
