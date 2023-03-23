@@ -339,3 +339,89 @@ $(".lets-play").click(function(e) {
 $(document).on("click", ".close-video, .video-overlay", function() {
     $("#video-wrap").remove();
 });
+
+
+// dropdown form
+(function($) {
+    var customSelect = $('select.custom-select');
+    customSelect.each(function() {
+        var that = $(this);
+        var listID = that.attr('id'),
+            groups = that.children('optgroup'),
+            theOptions = "",
+            startingOption = "",
+            customSelect = "";
+        if (groups.length) {
+            groups.each(function() {
+                var curGroup = $(this);
+                var curName = curGroup.attr('label');
+                theOptions += '<li class="optgroup">' + curName + '</li>';
+                curGroup.children('option').each(function() {
+                    var curOpt = $(this);
+                    var curVal = curOpt.attr('value'),
+                        curHtml = curOpt.html(),
+                        isSelected = curOpt.attr('selected');
+                    if (isSelected === 'selected') {
+                        startingOption = curHtml;
+                        theOptions += '<li class="selected" data-value="' + curVal + '">' + curHtml + '</li>';
+                    } else {
+                        theOptions += '<li data-value="' + curVal + '">' + curHtml + '</li>';
+                    }
+                });
+            });
+            that.children('option').each(function() {
+                var curOpt = $(this);
+                var curVal = curOpt.attr('value'),
+                    curHtml = curOpt.html(),
+                    isSelected = curOpt.attr('selected');
+                if (isSelected === 'selected') {
+                    startingOption = curHtml;
+                    theOptions = '<li class="selected" data-value="' + curVal + '">' + curHtml + '</li>' + theOptions;
+                } else {
+                    theOptions = '<li data-value="' + curVal + '">' + curHtml + '</li>' + theOptions;
+                }
+            });
+        } else {
+            that.children('option').each(function() {
+                var curOpt = $(this);
+                var curVal = curOpt.attr('value'),
+                    curHtml = curOpt.html(),
+                    isSelected = curOpt.attr('selected');
+                if (isSelected === 'selected') {
+                    startingOption = curHtml;
+                    theOptions += '<li class="selected" data-value="' + curVal + '">' + curHtml + '</li>';
+                } else {
+                    theOptions += '<li data-value="' + curVal + '">' + curHtml + '</li>';
+                }
+            });
+        }
+        customSelect = '<div class="dropdown-container"><div class="dropdown-select entypo-down-open-big"><span>' + startingOption + '</span></div><ul class="dropdown-select-ul" data-role="' + listID + '">' + theOptions + '</ul></div> <!-- .custom-select-wrapper -->';
+        $(customSelect).insertAfter(that);
+    });
+
+    var selectdd = $('.dropdown-select'),
+        selectul = $('.dropdown-select-ul'),
+        selectli = $('.dropdown-select-ul li');
+
+    selectdd.on('click', function() {
+        $(this).parent('.dropdown-container').toggleClass('active');
+    });
+    selectul.on('mouseleave', function() {
+        $(this).parent('.dropdown-container').removeClass('active');
+    });
+    selectli.on('click', function() {
+        var that = $(this);
+        if (!that.hasClass('optgroup')) {
+            var parentUl = that.parent('ul'),
+                thisdd = parentUl.siblings('.dropdown-select'),
+                lihtml = that.html(),
+                livalue = that.attr('data-value'),
+                originalSelect = '#' + parentUl.attr('data-role');
+            parentUl.parent('.dropdown-container').toggleClass('active');
+            that.siblings('li').removeClass('selected');
+            that.addClass('selected');
+            $(originalSelect).val(livalue);
+            thisdd.children('span').html(lihtml);
+        }
+    });
+})(jQuery);

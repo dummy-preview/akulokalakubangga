@@ -1665,8 +1665,8 @@ video {
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: -39px;
-    top: 87px;
+    right: 5px;
+    top: 5px;
     width: 30px;
     height: 30px;
     border-radius: 100%;
@@ -1744,8 +1744,13 @@ video {
 
 #video-wrap.active .video-container {
     transform: scale(1);
-    width: 260px;
     min-height: 70vh;
+}
+
+blockquote {
+    width: 300px !important;
+    height: 575px;
+    border-radius: 15px;
 }
 
 
@@ -4726,6 +4731,178 @@ p.copyright {
     padding-bottom: 24px
 }
 
+.custom-select {
+    display: none !important;
+}
+
+.dropdown-select-ul li.optgroup {
+    background: #ecf0f1;
+    color: #a1aab0;
+    border-bottom-color: #bdc3c7;
+}
+
+.dropdown-select-ul li.optgroup {
+    border-bottom: 1px solid;
+}
+
+.custom-select {
+    display: none;
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+}
+
+.dropdown-select {
+    z-index: 100;
+    width: 100%;
+    background: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.4px;
+    border: 1px solid #D5DAE1;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.dropdown-select:before {
+    float: right;
+    transition: 0.3s ease;
+}
+
+.active .dropdown-select:before {
+    transform: rotate(180deg);
+}
+
+.dropdown-select-ul {
+    height: 200px;
+    overflow-y: scroll;
+    display: none;
+    z-index: 100;
+    position: absolute;
+    margin-left: 5% !important;
+    width: 90%;
+    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: left;
+    border: 1px solid;
+}
+
+.dropdown-select-ul li {
+    display: block;
+    padding: 0.7rem 1.4rem;
+    cursor: pointer;
+}
+
+.dropdown-select-ul li.selected,
+.dropdown-select-ul li.optgroup {
+    cursor: default;
+}
+
+.dropdown-select-ul li.optgroup {
+    border-bottom: 1px solid;
+}
+
+.active .dropdown-select-ul {
+    display: block;
+    animation-fill-mode: both;
+    animation-duration: 0.3s;
+    animation-name: fadeIn;
+    margin: 0;
+    padding: 0;
+}
+
+.no-js .custom-select {
+    display: block;
+}
+
+.no-js .dropdown-select,
+.no-js .dropdown-select-ul {
+    display: none;
+}
+
+.dropdown-select:hover,
+.dropdown-select:focus {
+    -webkit-box-shadow: 0 0 5px 0 #f93501;
+    box-shadow: 0 0 5px 0 #f93501;
+}
+
+.active .dropdown-select {
+    -webkit-box-shadow: 0 0 5px 0 #f93501;
+    box-shadow: 0 0 5px 0 #f93501;
+}
+
+.dropdown-select-ul {
+    border-color: #34495e;
+    background: #ffffff;
+    /* color: #34495e; */
+}
+
+.dropdown-select-ul li:hover,
+.dropdown-select-ul li:focus {
+    background: #edf1f2;
+}
+
+.dropdown-select-ul li.selected {
+    background: #edf1f2;
+}
+
+.dropdown-select-ul li.optgroup {
+    font-weight: bold;
+    color: #F93501;
+    /* background: #F93501;
+    border-bottom: 2px solid #F93501; */
+    background: transparent;
+    position: relative;
+}
+
+.dropdown-select-ul li.optgroup::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #F93501 0%, #FFBF2E 100%);
+    border-radius: 30px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.dropdown-select:before {
+    float: right;
+    transition: 0.3s ease;
+}
+
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+}
+
+.entypo-down-open-big:before {
+    content: "\e764";
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .form-group1 {
     display: block;
     margin-bottom: 15px;
@@ -6804,6 +6981,12 @@ input[type=file] {
     }
     .slider-video {
         height: 500px;
+    }
+    blockquote {
+        width: 300px !important;
+        height: 575px;
+        max-width: 583px !important;
+        min-width: 273px !important;
     }
 }
 
