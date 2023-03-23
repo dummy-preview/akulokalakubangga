@@ -78,81 +78,135 @@ $(document).ready(function() {
 });
 
 // slider
-// var $swiper = $(".slide2");
-// var $bottomSlide = null;
-// var $bottomSlideContent = null;
+var $swiper = $(".slide2");
+var $bottomSlide = null;
+var $bottomSlideContent = null;
 
-// var mySwiper = new Swiper(".slide2", {
-//     spaceBetween: 1,
-//     slidesPerView: 1,
-//     centeredSlides: true,
-//     roundLengths: true,
-//     spaceBetween: 30,
-//     loop: true,
-//     loopAdditionalSlides: 30,
-//     speed: 1000,
-//     autoplay: {
-//         delay: 4000,
-//         disableOnInteraction: false,
-//     },
-//     pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//     },
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-// });
+var mySwiper = new Swiper(".slide2", {
+    spaceBetween: 1,
+    slidesPerView: 2.5,
+    centeredSlides: false,
+    roundLengths: true,
+    spaceBetween: 0,
+    loop: true,
+    loopAdditionalSlides: 30,
+    speed: 1000,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
-// tab 
-// (function($) {
-//     const $tabLink = $('#tabs-section .tab-link');
-//     const $tabBody = $('#tabs-section .tab-body');
-//     let timerOpacity;
-//     const init = () => {
-//         $tabLink.off('click').on('click', function(e) {
-//             e.preventDefault();
-//             e.stopPropagation();
-//             window.clearTimeout(timerOpacity);
-//             $tabLink.removeClass('active-tab ');
-//             $tabBody.removeClass('active-tab ');
-//             $tabBody.removeClass('active-content');
-//             $(this).addClass('active-tab');
-//             $($(this).attr('href')).addClass('active-tab');
-//             timerOpacity = setTimeout(() => {
-//                 $($(this).attr('href')).addClass('active-content');
-//             }, 50);
-//         });
-//     };
-//     $(function() {
-//         init();
-//     });
-// })(jQuery);
+var $swiper = $(".slide3");
+var $bottomSlide = null;
+var $bottomSlideContent = null;
 
+var mySwiper = new Swiper(".slide3", {
+    slidesPerView: 2.05,
+    centeredSlides: false,
+    roundLengths: true,
+    spaceBetween: 10,
+    loop: true,
+    loopAdditionalSlides: 30,
+    speed: 1000,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+var $swiper = $(".slide4");
+var $bottomSlide = null;
+var $bottomSlideContent = null;
+
+var mySwiper = new Swiper(".slide4", {
+    slidesPerView: 4.5,
+    centeredSlides: false,
+    roundLengths: true,
+    spaceBetween: 10,
+    loop: true,
+    loopAdditionalSlides: 30,
+    speed: 1000,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+});
+
+var $swiper = $(".slide5");
+var $bottomSlide = null;
+var $bottomSlideContent = null;
+
+var mySwiper = new Swiper(".slide5", {
+    slidesPerView: 2.1,
+    centeredSlides: false,
+    roundLengths: true,
+    spaceBetween: 10,
+    loop: true,
+    loopAdditionalSlides: 30,
+    speed: 1000,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+});
 // pagination
-// jQuery(function($) {
-//     var items = $("#content div.card");
-//     var numItems = items.length;
-//     var perPage = 12;
-//     items.slice(perPage).hide();
+jQuery(function($) {
+    var items = $("#content div.card");
+    var numItems = items.length;
+    var perPage = 12;
+    items.slice(perPage).hide();
 
-//     $(".pagination-vip").pagination({
-//         items: numItems,
-//         itemsOnPage: perPage,
-//         cssStyle: "custom-theme",
-//         prevText: "&laquo;",
-//         nextText: "&raquo;",
+    $(".pagination-vip").pagination({
+        items: numItems,
+        itemsOnPage: perPage,
+        cssStyle: "custom-theme",
+        prevText: "&laquo;",
+        nextText: "&raquo;",
 
-//         onPageClick: function(pageNumber) {
-//             var showFrom = perPage * (pageNumber - 1);
-//             var showTo = showFrom + perPage;
-//             items.hide()
-//                 .slice(showFrom, showTo).show();
-//         }
-//     });
+        onPageClick: function(pageNumber) {
+            var showFrom = perPage * (pageNumber - 1);
+            var showTo = showFrom + perPage;
+            items.hide()
+                .slice(showFrom, showTo).show();
+        }
+    });
 
-// });
+});
 // s parallax
 $.fn.moveIt = function() {
     var $window = $(window);
@@ -237,4 +291,48 @@ cursorScale.forEach(link => {
         cursor.classList.remove("grow");
         cursor.classList.remove("grow-small");
     });
+});
+
+// video modal
+function videoId(button) {
+    var $videoUrl = button.attr("data-video");
+    if ($videoUrl !== undefined) {
+        var $videoUrl = $videoUrl.toString();
+        var srcVideo;
+
+        if ($videoUrl.indexOf("mp4") !== -1) {
+            return (
+                '<video loop controls playsinline autoplay><source src="' +
+                $videoUrl +
+                '" type="video/mp4"></video>');
+
+        } else {
+            alert(
+                "error");
+
+            return false;
+        }
+
+    } else {
+        alert("No video assigned.");
+        return false;
+    }
+}
+
+$(".lets-play").click(function(e) {
+    e.preventDefault();
+    var $theVideo = videoId($(this));
+    if ($theVideo) {
+        $("body").
+        append(
+            '<div class="active" id="video-wrap"><span class="video-overlay"></span><div class="video-container"><div class="video-mobile">' +
+            $theVideo +
+            '<button class="close-video">x</button></div></div></div>').
+
+        addClass("active");
+    }
+});
+
+$(document).on("click", ".close-video, .video-overlay", function() {
+    $("#video-wrap").remove();
 });
