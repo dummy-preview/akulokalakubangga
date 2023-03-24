@@ -425,3 +425,18 @@ $(document).on("click", ".close-video, .video-overlay", function() {
         }
     });
 })(jQuery);
+
+
+// cange value
+// $('#option-select').on('change', function() {
+//     console.log(this.value);
+//     if (this.value == "Media Partner") {
+//         $('#recipient').val("me@somewhere.com");
+//     }
+//     if (this.value == "Iklan") {
+//         $('#recipient').val("me@somewhere-else.com");
+//     }
+//     if (this.value == "Layanan Pelanggan") {
+//         $('#recipient').val("not-me@somewhere.com");
+//     }
+// });
