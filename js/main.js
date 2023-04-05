@@ -306,7 +306,7 @@ function videoId(button) {
                 $videoUrl +
                 '" data-video-id="' +
                 $videoUrl +
-                '" style="max-width: 605px;min-width: 325px;"> <section></section></iframe> <script async src="https://www.tiktok.com/embed.js"></script>'
+                '" style="max-width: 605px;min-width: 325px;"> <section></section></blockquote> <script async src="https://www.tiktok.com/embed.js"></script>'
             );
 
         } else {
