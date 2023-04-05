@@ -6532,7 +6532,8 @@ input[type=file] {
         width: fit-content;
         margin: 0 auto;
         padding: 0rem 0;
-        margin-left: 35%;
+        margin-top: 40%;
+        padding-bottom: -10%;
     }
     .hamburger-line {
         background: #ffffff;
@@ -6672,7 +6673,7 @@ input[type=file] {
         height: 47px;
     }
     .portofolio__logo {
-        width: 320px;
+        /* width: 320px; */
         margin: 0px auto;
     }
     .portofolio__slider__btn button {
@@ -6704,14 +6705,14 @@ input[type=file] {
         margin-bottom: 75px;
     }
     .pencapaian__title {
-        font-size: 42px;
-        line-height: 55px;
-        padding-top: 46px;
-        padding-bottom: 28px;
+        font-size: 35px;
+        line-height: 52px;
+        padding-top: 15px;
+        padding-bottom: 0px;
     }
     .hero-portofolio2__item p {
         font-weight: 300;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 18px;
     }
     .hero-portofolio2__item {
@@ -6793,6 +6794,17 @@ input[type=file] {
     }
     .hadiah__title {
         padding-bottom: 40px;
+    }
+    .hero__wrap {
+        height: 0vh;
+    }
+    .hero-portofolio2 {
+        height: 590px;
+    }
+    .pencapaian__item {
+        padding: 10px;
+        margin: 0px 20px;
+        margin-bottom: 0px;
     }
 }
 
