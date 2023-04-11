@@ -2562,7 +2562,7 @@ figure.effect-ruby:hover p {
 }
 
 .kontak__item {
-    width: 250px;
+    width: auto;
 }
 
 .kontak__item img {
