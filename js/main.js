@@ -184,6 +184,33 @@ var mySwiper = new Swiper(".slide5", {
     },
 
 });
+
+var $swiper = $(".slide6");
+var $bottomSlide = null;
+var $bottomSlideContent = null;
+
+var mySwiper = new Swiper(".slide6", {
+    slidesPerView: 4,
+    // centeredSlides: false,
+    // roundLengths: true,
+    spaceBetween: 30,
+    loop: true,
+    loopAdditionalSlides: 30,
+    speed: 1000,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+});
 // pagination
 jQuery(function($) {
     var items = $("#content div.card");

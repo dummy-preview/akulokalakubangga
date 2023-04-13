@@ -1877,6 +1877,35 @@ blockquote {
     padding-top: 10px;
 }
 
+.galleri-vt {
+    padding-top: 100px;
+}
+
+.galleri-vt__slider {
+    position: relative;
+    height: 600px;
+    /* width: 90%; */
+}
+
+.galleri-vt__video3 {
+    background: #000;
+    /* width: 270px; */
+    /* height: 479px; */
+    border-radius: 20px;
+    position: relative;
+    /* margin: 0px 10px; */
+}
+
+.slide6 {
+    margin: 0px 50px;
+    padding: 0px 25px;
+}
+
+.swiper-button-prev img,
+.swiper-button-next img {
+    width: 25px;
+}
+
 .galleri {
     position: relative;
 }
@@ -5465,9 +5494,18 @@ input[type=file] {
     height: 55px;
     margin-top: -49px;
     border-radius: 50%;
-    /* background: #000; */
+    background: rgba(0, 0, 0, 0.8);
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
+
+
+/* .swiper-button-prev {
+    left: -15px;
+} */
 
 @media (max-width:1600px) {
     .home-banner {
