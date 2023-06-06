@@ -191,8 +191,58 @@ var $bottomSlideContent = null;
 
 var mySwiper = new Swiper(".slide6", {
     slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    loopAdditionalSlides: 30,
+    speed: 1000,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+});
+
+var $swiper = $(".slide7");
+var $bottomSlide = null;
+var $bottomSlideContent = null;
+
+var mySwiper = new Swiper(".slide7", {
+    slidesPerView: 2,
     // centeredSlides: false,
     // roundLengths: true,
+    spaceBetween: 30,
+    loop: true,
+    loopAdditionalSlides: 30,
+    speed: 1000,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+});
+
+var $swiper = $(".slide8");
+var $bottomSlide = null;
+var $bottomSlideContent = null;
+
+var mySwiper = new Swiper(".slide8", {
+    slidesPerView: 2,
     spaceBetween: 30,
     loop: true,
     loopAdditionalSlides: 30,
@@ -213,9 +263,9 @@ var mySwiper = new Swiper(".slide6", {
 });
 // pagination
 jQuery(function($) {
-    var items = $("#content div.card");
+    var items = $("#content div.item-video3");
     var numItems = items.length;
-    var perPage = 12;
+    var perPage = 8;
     items.slice(perPage).hide();
 
     $(".pagination-vip").pagination({
@@ -234,6 +284,29 @@ jQuery(function($) {
     });
 
 });
+jQuery(function($) {
+    var items = $("#content4 div.item-video4");
+    var numItems = items.length;
+    var perPage = 6;
+    items.slice(perPage).hide();
+
+    $(".pagination-vip").pagination({
+        items: numItems,
+        itemsOnPage: perPage,
+        cssStyle: "custom-theme",
+        prevText: "&laquo;",
+        nextText: "&raquo;",
+
+        onPageClick: function(pageNumber) {
+            var showFrom = perPage * (pageNumber - 1);
+            var showTo = showFrom + perPage;
+            items.hide()
+                .slice(showFrom, showTo).show();
+        }
+    });
+
+});
+
 // s parallax
 $.fn.moveIt = function() {
     var $window = $(window);
@@ -320,29 +393,19 @@ cursorScale.forEach(link => {
     });
 });
 
-// video modal
+// modal video tik tok
 function videoId(button) {
     var $videoUrl = button.attr("data-video");
     if ($videoUrl !== undefined) {
         var $videoUrl = $videoUrl.toString();
-        var srcVideo;
 
-        if ($videoUrl.indexOf("") !== -1) {
-            return (
-                '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/embed/' +
-                $videoUrl +
-                '" data-video-id="' +
-                $videoUrl +
-                '" style="max-width: 605px;min-width: 325px;"> <section></section></blockquote> <script async src="https://www.tiktok.com/embed.js"></script>'
-            );
-
-        } else {
-            alert(
-                "error");
-
-            return false;
-        }
-
+        return (
+            '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/embed/' +
+            $videoUrl +
+            '" data-video-id="' +
+            $videoUrl +
+            '" style="max-width: 605px;min-width: 325px;"> <section></section></blockquote> <script async src="https://www.tiktok.com/embed.js"></script>'
+        );
     } else {
         alert("No video assigned.");
         return false;
@@ -355,9 +418,90 @@ $(".lets-play").click(function(e) {
     if ($theVideo) {
         $("body").
         append(
-            '<div class="active" id="video-wrap"><span class="video-overlay"></span><div class="video-container"><div class="video-mobile">' +
-            $theVideo +
-            '<button class="close-video">x</button></div></div></div>').
+            `<div class="active" id="video-wrap">
+                <span class="video-overlay"></span>
+                    <div class="video-container">
+                        <div class="video-mobile">` + $theVideo + `
+                            <button class="close-video">x</button>
+                        </div>
+                    </div>
+            </div>`).
+
+        addClass("active");
+    }
+});
+
+// modal video youtube
+function videoIdy(button) {
+    var $videoUrly = button.attr("data-video");
+    if ($videoUrly !== undefined) {
+        var $videoUrly = $videoUrly.toString();
+        srcVideo =
+            "https://www.youtube.com/embed/" +
+            $videoUrly.substring($videoUrly.length - 11, $videoUrly.length) +
+            "?autoplay=1&loop=1&playlist=" +
+            $videoUrly.substring($videoUrly.length - 11, $videoUrly.length) +
+            "";
+        return (
+            '<iframe src="' +
+            srcVideo +
+            '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        );
+    } else {
+        alert("No video assigned.");
+        return false;
+    }
+}
+$(".lets-playyoutube").click(function(e) {
+    e.preventDefault();
+    var $theVideoy = videoIdy($(this));
+    if ($theVideoy) {
+        $("body").
+        append(
+            `<div class="active" id="video-wrap">
+                <span class="video-overlay"></span>
+                    <div class="video-container">
+                        <div class="video-youtube">` + $theVideoy + `
+                            <button class="close-video close-youtube">x</button>
+                        </div>
+                    </div>
+            </div>`).
+
+        addClass("active");
+    }
+});
+
+//modal video reels
+function videoIdr(button) {
+    var $videoUrlr = button.attr("data-video");
+    if ($videoUrlr !== undefined) {
+        var $videoUrlr = $videoUrlr.toString();
+
+        return (
+            '<iframe src="' +
+            $videoUrlr +
+            'embed" frameborder="0" scrolling="no"></iframe>'
+        );
+    } else {
+        alert("No video assigned.");
+        return false;
+    }
+}
+
+$(".lets-playr").click(function(e) {
+    e.preventDefault();
+    var $theVideor = videoIdr($(this));
+    if ($theVideor) {
+        $("body").
+        append(
+            `<div class="active" id="video-wrap">
+                <span class="video-overlay"></span>
+                    <div class="video-container">
+                        <div class="video-instagram">` + $theVideor + `
+                            <button class="close-video close-reels">x</button>
+                        </div>
+                    </div>
+            </div>`).
 
         addClass("active");
     }
