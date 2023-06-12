@@ -199,6 +199,20 @@ var mySwiper = new Swiper(".slide6", {
         delay: 4000,
         disableOnInteraction: false,
     },
+    breakpoints: {
+        640: {
+            slidesPerView: 1.5,
+            // spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+        },
+    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -216,8 +230,7 @@ var $bottomSlideContent = null;
 
 var mySwiper = new Swiper(".slide7", {
     slidesPerView: 2,
-    // centeredSlides: false,
-    // roundLengths: true,
+    centeredSlides: false,
     spaceBetween: 30,
     loop: true,
     loopAdditionalSlides: 30,
@@ -225,6 +238,14 @@ var mySwiper = new Swiper(".slide7", {
     autoplay: {
         delay: 3000,
         disableOnInteraction: false,
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 1.2,
+            spaceBetween: 10,
+            centeredSlides: false,
+        },
+
     },
     pagination: {
         el: '.swiper-pagination',

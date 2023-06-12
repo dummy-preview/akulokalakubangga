@@ -1905,7 +1905,7 @@ blockquote {
 }
 
 .galleri-vtyoutube {
-    background: #1671BC;
+    background: #E0F0FF;
 }
 
 .galleri-vtyoutube__title {
@@ -1914,7 +1914,7 @@ blockquote {
     font-size: 150px;
     line-height: 178px;
     text-align: center;
-    color: #2386D7;
+    color: #ffffff;
     margin-bottom: -60px;
 }
 
@@ -1953,7 +1953,7 @@ blockquote {
 }
 
 .galleri-vtreels {
-    background: #E0F0FF;
+    background: #1671BC;
     /* height: 100vh; */
 }
 
@@ -1968,7 +1968,7 @@ blockquote {
     font-size: 150px;
     line-height: 178px;
     text-align: center;
-    color: #FFFFFF;
+    color: #2385D7;
     margin-bottom: -60px;
 }
 
@@ -7070,5 +7070,9 @@ input[type=file] {
     .item-video3 {
         margin: 10px;
         width: 150px;
+    }
+    .slide6 {
+        margin: 0px 0px;
+        padding: 0px 25px;
     }
 }
