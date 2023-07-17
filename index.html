@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,800&display=swap" rel="stylesheet">
     <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- thumb share -->
@@ -54,7 +55,13 @@
                         <li id="close3" class="menu-item current-menu-item logo-hide">
                             <a class="nav__link" href="./"><img src="img/logo-markom.svg"></a>
                         </li>
-                        <li id="close4" class="menu-item current-menu-item"><a class="nav__link" href="#video">Video</a></li>
+                        <li id="close4" class="menu-item current-menu-item sub-menu">
+                            <a class="nav__link" href="#video">Video</a>
+                            <ul class="dropdown-nav list-l">
+                                <li><a href="video.html">Video</a></li>
+                                <li><a href="content">Content</a></li>
+                            </ul>
+                        </li>
                         <li id="close5" class="menu-item current-menu-item"><a class="nav__link" href="#kontak">Kolaborasi</a></li>
                     </ul>
                 </div>
@@ -189,9 +196,11 @@
                                 <div class="swiper-slide">
                                     <div class="contentSwiper">
                                         <div class="galleri-vtyoutube__video">
-                                            <img src="img/bg-youtube.jpg" alt="">
-                                            <div class="video3__btn lets-playyoutube" data-video="https://www.youtube.com/watch?v=psyXu-_jj0E">
-                                                <img src="img/btn-play.png" alt="">
+                                            <img src="https://i.ytimg.com/vi/Z2urchjHYoY/maxresdefault.jpg" alt="">
+                                            <div class="video3__btn">
+                                                <a href="https://www.youtube.com/watch?v=Z2urchjHYoY" class="video-yt">
+                                                    <img src="img/btn-play.png" alt="">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -199,9 +208,11 @@
                                 <div class="swiper-slide">
                                     <div class="contentSwiper">
                                         <div class="galleri-vtyoutube__video">
-                                            <img src="img/bg-youtube.jpg" alt="">
-                                            <div class="video3__btn lets-playyoutube" data-video="https://www.youtube.com/watch?v=Z2urchjHYoY">
-                                                <img src="img/btn-play.png" alt="">
+                                            <img src="https://i.ytimg.com/vi/psyXu-_jj0E/maxresdefault.jpg" alt="">
+                                            <div class="video3__btn">
+                                                <a href="https://www.youtube.com/watch?v=psyXu-_jj0E" class="video-yt">
+                                                    <img src="img/btn-play.png" alt="">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -209,24 +220,15 @@
                                 <div class="swiper-slide">
                                     <div class="contentSwiper">
                                         <div class="galleri-vtyoutube__video">
-                                            <img src="img/bg-youtube.jpg" alt="">
-                                            <div class="video3__btn lets-playyoutube" data-video="https://www.youtube.com/watch?v=enUzkPBzsqg">
-                                                <img src="img/btn-play.png" alt="">
+                                            <img src="https://i.ytimg.com/vi/enUzkPBzsqg/maxresdefault.jpg" alt="">
+                                            <div class="video3__btn">
+                                                <a href="https://www.youtube.com/watch?v=enUzkPBzsqg" class="video-yt">
+                                                    <img src="img/btn-play.png" alt="">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="contentSwiper">
-                                        <div class="galleri-vtyoutube__video">
-                                            <img src="img/bg-youtube.jpg" alt="">
-                                            <div class="video3__btn lets-playyoutube" data-video="https://www.youtube.com/watch?v=p_oX7Rx34tk">
-                                                <img src="img/btn-play.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                             <div class="swiper-button-prev"><img src="img/icon/arrow_back.svg"></div>
                             <div class="swiper-button-next"><img src="img/icon/arrow_next.svg"></div>
@@ -251,8 +253,10 @@
                                     <div class="contentSwiper">
                                         <div class="galleri-vt__video3">
                                             <img src="img/bg-reels.jpg" alt="">
-                                            <div class="video3__btn lets-playr" data-video="https://www.instagram.com/p/CtGWvoGtVmZ/">
-                                                <img src="img/btn-play.png" alt="">
+                                            <div class="video3__btn">
+                                                <a href="https://www.instagram.com/p/CtGCu3SNbk4/embed" class="video_model">
+                                                    <img src="img/btn-play.png" alt="">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -261,8 +265,10 @@
                                     <div class="contentSwiper">
                                         <div class="galleri-vt__video3">
                                             <img src="img/bg-reels.jpg" alt="">
-                                            <div class="video3__btn lets-playr" data-video="https://www.instagram.com/p/CtGCu3SNbk4/">
-                                                <img src="img/btn-play.png" alt="">
+                                            <div class="video3__btn">
+                                                <a href="https://www.tiktok.com/embed/7205927549824683290" class="video_model">
+                                                    <img src="img/btn-play.png" alt="">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -271,19 +277,22 @@
                                     <div class="contentSwiper">
                                         <div class="galleri-vt__video3">
                                             <img src="img/v3-1.jpg" alt="">
-                                            <div class="video3__btn lets-play" data-video="7207405994459024667">
-                                                <img src="img/btn-play.png" alt="">
+                                            <div class="video3__btn">
+                                                <a href="https://www.instagram.com/p/CtGCu3SNbk4/embed" class="video_model">
+                                                    <img src="img/btn-play.png" alt="">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="swiper-slide">
                                     <div class="contentSwiper">
                                         <div class="galleri-vt__video3">
                                             <img src="img/v3-3.jpg" alt="">
-                                            <div class="video3__btn lets-play" data-video="7205927549824683290">
-                                                <img src="img/btn-play.png" alt="">
+                                            <div class="video3__btn">
+                                                <a href="https://www.instagram.com/p/CtGCu3SNbk4/embed" class="video_model">
+                                                    <img src="img/btn-play.png" alt="">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -292,8 +301,10 @@
                                     <div class="contentSwiper">
                                         <div class="galleri-vt__video3">
                                             <img src="img/bg-reels.jpg" alt="">
-                                            <div class="video3__btn lets-playr" data-video="https://www.instagram.com/p/CtEkpxqMyNq/">
-                                                <img src="img/btn-play.png" alt="">
+                                            <div class="video3__btn">
+                                                <a href="https://www.instagram.com/p/CtGCu3SNbk4/embed" class="video_model">
+                                                    <img src="img/btn-play.png" alt="">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -302,8 +313,10 @@
                                     <div class="contentSwiper">
                                         <div class="galleri-vt__video3">
                                             <img src="img/bg-reels.jpg" alt="">
-                                            <div class="video3__btn lets-playr" data-video="https://www.instagram.com/p/CtEC_RnM7z6/">
-                                                <img src="img/btn-play.png" alt="">
+                                            <div class="video3__btn">
+                                                <a href="https://www.instagram.com/p/CtGCu3SNbk4/embed" class="video_model">
+                                                    <img src="img/btn-play.png" alt="">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -639,6 +652,7 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="js/jquery.simplePagination.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/main-home.js"></script>

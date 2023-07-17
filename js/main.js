@@ -87,7 +87,7 @@ var mySwiper = new Swiper(".slide2", {
     slidesPerView: 2.5,
     centeredSlides: false,
     roundLengths: true,
-    spaceBetween: 0,
+    spaceBetween: 10,
     loop: true,
     loopAdditionalSlides: 30,
     speed: 1000,
@@ -110,7 +110,7 @@ var $bottomSlide = null;
 var $bottomSlideContent = null;
 
 var mySwiper = new Swiper(".slide3", {
-    slidesPerView: 2.05,
+    slidesPerView: 2.1,
     centeredSlides: false,
     roundLengths: true,
     spaceBetween: 10,
@@ -202,7 +202,6 @@ var mySwiper = new Swiper(".slide6", {
     breakpoints: {
         640: {
             slidesPerView: 1.5,
-            // spaceBetween: 20,
         },
         768: {
             slidesPerView: 2,
@@ -415,122 +414,122 @@ cursorScale.forEach(link => {
 });
 
 // modal video tik tok
-function videoId(button) {
-    var $videoUrl = button.attr("data-video");
-    if ($videoUrl !== undefined) {
-        var $videoUrl = $videoUrl.toString();
+// function videoId(button) {
+//     var $videoUrl = button.attr("data-video");
+//     if ($videoUrl !== undefined) {
+//         var $videoUrl = $videoUrl.toString();
 
-        return (
-            '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/embed/' +
-            $videoUrl +
-            '" data-video-id="' +
-            $videoUrl +
-            '" style="max-width: 605px;min-width: 325px;"> <section></section></blockquote> <script async src="https://www.tiktok.com/embed.js"></script>'
-        );
-    } else {
-        alert("No video assigned.");
-        return false;
-    }
-}
+//         return (
+//             '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/embed/' +
+//             $videoUrl +
+//             '" data-video-id="' +
+//             $videoUrl +
+//             '" style="max-width: 605px;min-width: 325px;"> <section></section></blockquote> <script async src="https://www.tiktok.com/embed.js"></script>'
+//         );
+//     } else {
+//         alert("No video assigned.");
+//         return false;
+//     }
+// }
 
-$(".lets-play").click(function(e) {
-    e.preventDefault();
-    var $theVideo = videoId($(this));
-    if ($theVideo) {
-        $("body").
-        append(
-            `<div class="active" id="video-wrap">
-                <span class="video-overlay"></span>
-                    <div class="video-container">
-                        <div class="video-mobile">` + $theVideo + `
-                            <button class="close-video">x</button>
-                        </div>
-                    </div>
-            </div>`).
+// $(".lets-play").click(function(e) {
+//     e.preventDefault();
+//     var $theVideo = videoId($(this));
+//     if ($theVideo) {
+//         $("body").
+//         append(
+//             `<div class="active" id="video-wrap">
+//                 <span class="video-overlay"></span>
+//                     <div class="video-container">
+//                         <div class="video-mobile">` + $theVideo + `
+//                             <button class="close-video">x</button>
+//                         </div>
+//                     </div>
+//             </div>`).
 
-        addClass("active");
-    }
-});
+//         addClass("active");
+//     }
+// });
 
 // modal video youtube
-function videoIdy(button) {
-    var $videoUrly = button.attr("data-video");
-    if ($videoUrly !== undefined) {
-        var $videoUrly = $videoUrly.toString();
-        srcVideo =
-            "https://www.youtube.com/embed/" +
-            $videoUrly.substring($videoUrly.length - 11, $videoUrly.length) +
-            "?autoplay=1&loop=1&playlist=" +
-            $videoUrly.substring($videoUrly.length - 11, $videoUrly.length) +
-            "";
-        return (
-            '<iframe src="' +
-            srcVideo +
-            '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-        );
-    } else {
-        alert("No video assigned.");
-        return false;
-    }
-}
-$(".lets-playyoutube").click(function(e) {
-    e.preventDefault();
-    var $theVideoy = videoIdy($(this));
-    if ($theVideoy) {
-        $("body").
-        append(
-            `<div class="active" id="video-wrap">
-                <span class="video-overlay"></span>
-                    <div class="video-container">
-                        <div class="video-youtube">` + $theVideoy + `
-                            <button class="close-video close-youtube">x</button>
-                        </div>
-                    </div>
-            </div>`).
+// function videoIdy(button) {
+//     var $videoUrly = button.attr("data-video");
+//     if ($videoUrly !== undefined) {
+//         var $videoUrly = $videoUrly.toString();
+//         srcVideo =
+//             "https://www.youtube.com/embed/" +
+//             $videoUrly.substring($videoUrly.length - 11, $videoUrly.length) +
+//             "?autoplay=1&loop=1&playlist=" +
+//             $videoUrly.substring($videoUrly.length - 11, $videoUrly.length) +
+//             "";
+//         return (
+//             '<iframe src="' +
+//             srcVideo +
+//             '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+//         );
+//     } else {
+//         alert("No video assigned.");
+//         return false;
+//     }
+// }
+// $(".lets-playyoutube").click(function(e) {
+//     e.preventDefault();
+//     var $theVideoy = videoIdy($(this));
+//     if ($theVideoy) {
+//         $("body").
+//         append(
+//             `<div class="active" id="video-wrap">
+//                 <span class="video-overlay"></span>
+//                     <div class="video-container">
+//                         <div class="video-youtube">` + $theVideoy + `
+//                             <button class="close-video close-youtube">x</button>
+//                         </div>
+//                     </div>
+//             </div>`).
 
-        addClass("active");
-    }
-});
+//         addClass("active");
+//     }
+// });
 
 //modal video reels
-function videoIdr(button) {
-    var $videoUrlr = button.attr("data-video");
-    if ($videoUrlr !== undefined) {
-        var $videoUrlr = $videoUrlr.toString();
+// function videoIdr(button) {
+//     var $videoUrlr = button.attr("data-video");
+//     if ($videoUrlr !== undefined) {
+//         var $videoUrlr = $videoUrlr.toString();
 
-        return (
-            '<iframe src="' +
-            $videoUrlr +
-            'embed" frameborder="0" scrolling="no"></iframe>'
-        );
-    } else {
-        alert("No video assigned.");
-        return false;
-    }
-}
+//         return (
+//             '<iframe src="' +
+//             $videoUrlr +
+//             'embed" frameborder="0" scrolling="no"></iframe>'
+//         );
+//     } else {
+//         alert("No video assigned.");
+//         return false;
+//     }
+// }
 
-$(".lets-playr").click(function(e) {
-    e.preventDefault();
-    var $theVideor = videoIdr($(this));
-    if ($theVideor) {
-        $("body").
-        append(
-            `<div class="active" id="video-wrap">
-                <span class="video-overlay"></span>
-                    <div class="video-container">
-                        <div class="video-instagram">` + $theVideor + `
-                            <button class="close-video close-reels">x</button>
-                        </div>
-                    </div>
-            </div>`).
+// $(".lets-playr").click(function(e) {
+//     e.preventDefault();
+//     var $theVideor = videoIdr($(this));
+//     if ($theVideor) {
+//         $("body").
+//         append(
+//             `<div class="active" id="video-wrap">
+//                 <span class="video-overlay"></span>
+//                     <div class="video-container">
+//                         <div class="video-instagram">` + $theVideor + `
+//                             <button class="close-video close-reels">x</button>
+//                         </div>
+//                     </div>
+//             </div>`).
 
-        addClass("active");
-    }
-});
+//         addClass("active");
+//     }
+// });
 
-$(document).on("click", ".close-video, .video-overlay", function() {
-    $("#video-wrap").remove();
-});
+// $(document).on("click", ".close-video, .video-overlay", function() {
+//     $("#video-wrap").remove();
+// });
 
 
 // dropdown form
@@ -632,3 +631,53 @@ $(document).on("click", ".close-video, .video-overlay", function() {
 //         $('#recipient').val("not-me@somewhere.com");
 //     }
 // });
+
+jQuery(document).ready(function($) {
+
+    var popup = {
+        init: function() {
+            popup.popupVideo();
+        },
+        popupVideo: function() {
+
+            $('.video_model').magnificPopup({
+                type: 'iframe',
+                iframe: {
+                    markup: '<div>' +
+                        '<div class="mfp-iframe-scaler v-tr" >' +
+                        '<div class="mfp-close"></div>' +
+                        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen scrolling="no"></iframe>' +
+                        '</div></div>'
+                },
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+                fixedContentPos: false,
+                gallery: {
+                    enabled: true
+                }
+            });
+
+            $('.video-yt').magnificPopup({
+                type: 'iframe',
+                iframe: {
+                    markup: '<div>' +
+                        '<div class="mfp-iframe-scaler v-yt" >' +
+                        '<div class="mfp-close"></div>' +
+                        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen scrolling="no"></iframe>' +
+                        '</div></div>'
+                },
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+                fixedContentPos: false,
+                gallery: {
+                    enabled: true
+                }
+            });
+
+        }
+    };
+
+    popup.init($);
+});
